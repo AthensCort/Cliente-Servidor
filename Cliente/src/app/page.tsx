@@ -8,6 +8,7 @@ const OperadorClienteServidor = () => {
   const [num2, setNum2] = useState<number | ''>('');
   const [operador, setOperador] = useState<string>('+');
   const [resultado, setResultado] = useState<string>('');
+  const [error, setError] = useState<string>('');
 
   const calcular = async () => {
     setResultado("")
@@ -21,8 +22,7 @@ const OperadorClienteServidor = () => {
       const data = await res.json();
       setResultado(`Resultado: ${data.resultado}`);
     } catch (error) {
-      console.error('Error al calcular:', error);
-      setResultado('Hubo un error al procesar la solicitud.');
+      setResultado('No jalo shavo :p');
     }
   };
 
@@ -56,3 +56,11 @@ const OperadorClienteServidor = () => {
 };
 
 export default OperadorClienteServidor;
+
+
+
+//IDENTIFICACION MENSAJE
+//CAROLINA ORTEGA A01282386
+
+//ACTIVIDAD CLEINTE SERVIDOR CON FRONT END Y BACK END
+//MARZO 13-> ACTIVIDAD EN CLASE 
